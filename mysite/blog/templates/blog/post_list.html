@@ -6,5 +6,12 @@
 </head>
 <body>
 <h1>Solid blog</h1>
+{% for post in posts %}
+    <div class="posts">
+        <div class="post_title"><a href="">{{ post.title }}</a></div> <br>
+        <div class="date_pub">published: {{ post.published_date }}</div> <br>
+        <div class="post_text">{{ post.text|linebreaksbr }}</div> <br> <br>
+    </div>
+{% endfor %}
 </body>
 </html>
